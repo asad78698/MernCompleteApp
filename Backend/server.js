@@ -9,8 +9,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // CORS setup
-app.use(cors({
-    origin: 'https://mern-complete-app.vercel.app/',
+app.use(cors({  
+    origin: 'https://mern-complete-app-su1r.vercel.app/',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
