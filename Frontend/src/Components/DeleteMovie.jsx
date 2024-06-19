@@ -22,7 +22,7 @@ const DeleteMovie = ({movieName}) => {
 
     if(response.status === 200){
         console.log(getResponse.message)
-        window.location.reload();
+        navigate('/dashboard')
 
    }
 
