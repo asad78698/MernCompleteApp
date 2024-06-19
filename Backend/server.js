@@ -4,7 +4,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
-
+const AddMovies = require('../DbModels/AddMovies');
 // Middleware setup
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
