@@ -4,8 +4,7 @@ const jwt = require("jsonwebtoken");
 const { OAuth2Client } = require('google-auth-library');
 const dotenv = require('dotenv');
 dotenv.config();
-const AddMovies = require("../DbModels/AddMovies");
-const authenticate = require("../Middlewares/middleware");
+const AddMovies = require('../DbModels/AddMovies');
 
 // Function to generate token
 const generateToken = (user) => {
