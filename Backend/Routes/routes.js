@@ -3,7 +3,7 @@ const route = express.Router();
 const {register, login, SendgoogleAuth, DeleteMovies, UpdateMovies, recievegoogleAuth, AddNewMovies, AllMovies} = require('../Auth-Controllers/auth-controlers');
 const authenticate = require('../Middlewares/middleware');
 
-route.get('/', (req, res) => {
+route.get('/asad', (req, res) => {
     res.send('Welcome to the Auth API');
 });
 
