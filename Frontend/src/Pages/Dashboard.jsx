@@ -30,7 +30,7 @@ const Dashboard = () => {
 
     const getMovies = async () => {
       try {
-        const response = await fetch('http://localhost:5000/allmovies', {
+        const response = await fetch('https://mern-complete-app.vercel.app/allmovies', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
