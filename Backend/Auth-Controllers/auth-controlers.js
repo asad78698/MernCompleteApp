@@ -13,7 +13,7 @@ const generateToken = (user) => {
         userId: user._id,
         email: user.email,
         username: user.username
-    }, process.env.SECRETS, { expiresIn: '1d' });
+    }, 'asadd4azxxsdwsde', { expiresIn: '1d' });
 };
 
 // Fetch user data from Google API
@@ -27,8 +27,8 @@ async function getGoogleAccount(access_token) {
 const SendgoogleAuth = async (req, res) => {
     const redirectUri = 'http://127.0.0.1:5000/auth/callback';
     const GoogleAuth = new OAuth2Client({
-        clientId: process.env.Client_ID,
-        clientSecret: process.env.Client_Secret,
+        clientId: '473913145115-qhbvg2q26nphsuq7j8nojhcb9r5gksdd.apps.googleusercontent.com',
+        clientSecret: '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',
         redirectUri: redirectUri
     });
     const authUrl = GoogleAuth.generateAuthUrl({
@@ -45,8 +45,8 @@ const recievegoogleAuth = async (req, res) => {
     try {
         const redirectUri = 'http://127.0.0.1:5000/auth/callback';
         const GoogleAuth = new OAuth2Client({
-            clientId: process.env.Client_ID,
-            clientSecret: process.env.Client_Secret,
+            clientId: '473913145115-qhbvg2q26nphsuq7j8nojhcb9r5gksdd.apps.googleusercontent.com',
+            clientSecret: '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',
             redirectUri: redirectUri
         });
         const { tokens } = await GoogleAuth.getToken(code);

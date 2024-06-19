@@ -21,7 +21,7 @@ const routes = require('./Routes/routes');
 app.use('/', routes);
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect('mongodb+srv://oliverjames4455:aGW1ZhMsdCpsSxNU@cluster0.eenr2d7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
     .then(() => {
         console.log('Connected to MongoDB');
 
