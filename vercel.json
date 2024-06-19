@@ -23,8 +23,8 @@
         "dest": "/frontend/moviewebsite/$1"
       }
     ],
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/" }
-    ]
+    "rewrites": 
+    [{ "source": "/(.*)", "destination": "/index.html" }]
+
   }
   
