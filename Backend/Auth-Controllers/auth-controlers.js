@@ -186,7 +186,7 @@ const AllMovies = async (req, res) => {
 
         res.status(200).json({ allMovies });
     } catch (error) {
-        console.error('Error fetching movies:', error);
+        console.error('Error fetching movies:', error); // Ensure this logs the error
         res.status(500).json({ message: 'Internal server error' });
     }
 };
