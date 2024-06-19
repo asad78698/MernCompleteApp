@@ -22,6 +22,7 @@ const DeleteMovie = ({movieName}) => {
 
     if(response.status === 200){
         alert(getResponse.message)
+        navigate('/home')
 
    }
 
