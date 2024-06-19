@@ -18,9 +18,9 @@ route.post('/auth', SendgoogleAuth);
 route.get('/auth/callback', recievegoogleAuth );
 
 
-route.post('/addmovies', authenticate, AddNewMovies)
+route.post('/addmovies', AddNewMovies)
 
-route.get('/allmovies', authenticate, AllMovies)
+route.get('/allmovies', AllMovies) 
 
 
 route.delete('/delete', DeleteMovies)
