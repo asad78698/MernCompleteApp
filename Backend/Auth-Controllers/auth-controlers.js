@@ -1,10 +1,10 @@
-const userModel = require("../DbModels/users");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { OAuth2Client } = require('google-auth-library');
 const dotenv = require('dotenv');
 dotenv.config();
-const AddMovies = require('../DbModels/AddMovies');
+const AddMovies = require('../DbModels/addmovies');
+const userModel = require('../DbModels/users')
 
 // Function to generate token
 const generateToken = (user) => {
