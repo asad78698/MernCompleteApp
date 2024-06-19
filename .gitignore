@@ -1,0 +1,16 @@
+# Ignore node_modules directories
+/backend/node_modules/
+/frontend/moviewebsite/node_modules/
+
+# Ignore environment variables
+/backend/.env
+/frontend/.env
+
+# Ignore build directories (optional, if applicable)
+frontend/build/
+/backend/build/
+
+# Other potential ignores
+.DS_Store
+*.log
+*.lock
