@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import DeleteMovie from '../Components/DeleteMovie';
 const Dashboard = () => {
   const [movies, setMovies] = useState([]);
@@ -20,48 +20,48 @@ const Dashboard = () => {
   }
 
   useEffect(() => {
-    const location = useLocation();
     const token = localStorage.getItem('token');
     console.log('Token:', token); // Log the token to verify it exists
 
     if (!token) {
-        navigate('/login');
-        return;
+      navigate('/login');
+      return;
     }
 
     const getMovies = async () => {
-        try {
-            const response = await fetch('https://mern-complete-app.vercel.app/allmovies', {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Bearer ${token}`,
-                },
-            });
+      try {
+        const response = await fetch('https://mern-complete-app.vercel.app/allmovies', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
-            console.log('Response Status:', response.status);
-            console.log('Response Headers:', response.headers);
+        // Log the response status and headers
+        console.log('Response Status:', response.status);
+        console.log('Response Headers:', response.headers);
 
-            const contentType = response.headers.get('content-type');
-            if (!contentType || !contentType.includes('application/json')) {
-                throw new TypeError('Response not JSON');
-            }
-
-            const data = await response.json();
-
-            if (response.status === 200) {
-                setMovies(data.allMovies);
-                console.log('Movies fetched successfully', data.allMovies);
-            } else {
-                console.log('Error fetching movies:', data);
-            }
-        } catch (error) {
-            console.error('Error fetching movies:', error);
+        const contentType = response.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+          throw new TypeError('Response not JSON');
         }
+
+        const data = await response.json();
+
+        if (response.status === 200) {
+          setMovies(data.allMovies); // Assuming data is structured with 'allMovies' array
+          console.log('Movies fetched successfully', data.allMovies);
+        } else {
+          console.log('Error fetching movies:', data);
+        }
+      } catch (error) {
+        console.error('Error fetching movies:', error);
+      }
     };
 
     getMovies();
-}, [location]);
+  }, []);
 
   return (
     <>
