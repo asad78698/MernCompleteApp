@@ -28,7 +28,7 @@ const AddMovies = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/addmovies', {
+            const response = await fetch('https://mern-complete-app.vercel.app/addmovies', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

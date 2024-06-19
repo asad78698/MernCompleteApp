@@ -4,7 +4,7 @@ import { google } from '../assets/Images';
 const GoogleLoginButton = () => {
   const handleLoginClick = async () => {
     try {
-      const response = await fetch('http://localhost:5000/auth', {
+      const response = await fetch('https://mern-complete-app.vercel.app/auth', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -24,7 +24,7 @@ const UpdateMovie = () => {
 
         }   
         try {
-            const response = await fetch('http://localhost:5000/update', {
+            const response = await fetch('https://mern-complete-app.vercel.app/update', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

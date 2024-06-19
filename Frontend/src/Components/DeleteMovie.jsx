@@ -8,7 +8,7 @@ const DeleteMovie = ({movieName}) => {
    const deleteMovie = async () => {    
     const data = { movieName };
 
-    const response = await fetch('http://localhost:5000/delete', {
+    const response = await fetch('https://mern-complete-app.vercel.app/delete', {
         method: 'DELETE',
         headers:{
             'Content-Type': 'application/json',
