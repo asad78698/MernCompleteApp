@@ -15,14 +15,15 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
-// Handle all other routes to serve the front-end application
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
 
 // Routes setup
 const routes = require('./Routes/routes');
 app.use('/', routes);
+
+// Handle all other routes to serve the front-end application
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 // MongoDB connection
 mongoose.connect('mongodb+srv://oliverjames4455:aGW1ZhMsdCpsSxNU@cluster0.eenr2d7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
