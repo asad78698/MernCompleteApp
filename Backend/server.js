@@ -4,6 +4,9 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
+
+const mongoURI = 'mongodb+srv://oliverjames4455:aGW1ZhMsdCpsSxNU@cluster0.eenr2d7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+
 // Middleware setup
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -26,7 +29,7 @@ app.get('*', (req, res) => {
 });
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://oliverjames4455:aGW1ZhMsdCpsSxNU@cluster0.eenr2d7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('Connected to MongoDB');
 
