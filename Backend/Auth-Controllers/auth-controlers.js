@@ -24,7 +24,7 @@ async function getGoogleAccount(access_token) {
 
 // Send Google OAuth URL
 const SendgoogleAuth = async (req, res) => {
-    const redirectUri = 'http://127.0.0.1:5000/auth/callback';
+    const redirectUri = 'https://mern-complete-app.vercel.app/auth/callback';
     const GoogleAuth = new OAuth2Client({
         clientId: '473913145115-qhbvg2q26nphsuq7j8nojhcb9r5gksdd.apps.googleusercontent.com',
         clientSecret: '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',
