@@ -68,7 +68,7 @@ const recievegoogleAuth = async (req, res) => {
         const token = generateToken(user);
 
         // Send the token to the client
-       res.redirect(`http://localhost:5173?token=${token}`)
+       res.redirect(`https://mern-complete-app-su1r.vercel.app/?token=${token}`)
 
     } catch (error) {
         console.error(error);
