@@ -84,20 +84,6 @@ import GoogleLoginButton from "../Components/GoogleLoginButton";
           </div>
           {error && <Typography color="red">{error}</Typography>}
         </CardBody>
-        <CardFooter className="pt-0">
-          <Typography variant="small" className=" flex justify-center">
-            Don&apos;t have an account?
-            <Typography
-              as="a"
-              href="/register"
-              variant="small"
-              color="blue-gray"
-              className="ml-1 font-bold"
-            >
-              Sign up
-            </Typography>
-          </Typography>
-        </CardFooter>
         <GoogleLoginButton/>
       </Card>
     );
