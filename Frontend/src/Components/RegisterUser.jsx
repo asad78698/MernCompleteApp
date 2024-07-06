@@ -110,7 +110,7 @@ const RegisterUser = () => {
           Register
         </button>
         <p className='text-center p-4'>
-          Already have an account? <a href='/login' className='text-blue-500'>Login</a>
+          Already have an account? <a href='#' className='text-blue-500'>Login</a>
         </p>
       </form>
       {error && <p className='text-red-500 text-center'>{error}</p>}
