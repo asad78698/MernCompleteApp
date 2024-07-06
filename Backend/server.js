@@ -26,7 +26,7 @@ app.use('/', routes);
 
 // Handle all other routes to serve the front-end application
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, '../frontend/build/index.html'));
 });
 
 // MongoDB connection
